@@ -1,0 +1,11 @@
+{
+  "name": "test-jison",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "jison -t -m js calc.y calc.l -o calc.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "jison": "^0.4.18"
+  }
+}

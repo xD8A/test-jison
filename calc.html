@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <script type="text/javascript" src="calc.js"></script>
+  <script type="text/javascript">
+  	function solve(e) {
+  		e.preventDefault();
+
+  		var el = document.getElementById("expr");
+  		const expr = el.value;
+  		const result = calc.parse(expr);
+  		el = document.getElementById("result");
+  		el.value = result;
+  	}
+  </script>
+ </head>
+ <body>
+  <p>
+   <input id="expr" type="text" size="40" onkeydown="if (event.key === 'Enter') solve(event)" />
+   <button onclick="solve(event)">Calc</button>
+  </p>
+  <p>
+  	<input id="result" type="text" size="40" readonly />
+  <p>
+ </body>
+</html>
